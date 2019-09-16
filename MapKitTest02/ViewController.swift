@@ -18,9 +18,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // MapType 설정 (standard, hybrid, satellite)
-        mapView.mapType = MKMapType.satellite
+        mapView.mapType = MKMapType.standard
         //mapView.mapType = MKMapType.hybrid
-        //mapView.mapType = MKMapType.standard
+        //mapView.mapType = MKMapType.satellite
         
         // 위도, 경도 설정 (DIT 35.165964, 129.072543)
         let location = CLLocationCoordinate2D(latitude: 35.165964, longitude: 129.072543)
@@ -44,7 +44,19 @@ class ViewController: UIViewController {
         annotation.subtitle = "We Are DIT"
         mapView.addAnnotation(annotation)
     }
-
+    
+    // MapType 버튼 설정 (standard, hybrid, satellite)
+    @IBAction func standardType(_ sender: Any) {
+        mapView.mapType = MKMapType.standard
+    }
+    
+    @IBAction func hybridType(_ sender: Any) {
+        mapView.mapType = MKMapType.hybrid
+    }
+    
+    @IBAction func satelliteType(_ sender: Any) {
+        mapView.mapType = MKMapType.satellite
+    }
 
 }
 
