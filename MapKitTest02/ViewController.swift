@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // MapType 설정 (standard, hybrid, satellite)
+        mapView.mapType = MKMapType.satellite
+        //mapView.mapType = MKMapType.hybrid
+        //mapView.mapType = MKMapType.standard
+        
         // 위도, 경도 설정 (DIT 35.165964, 129.072543)
         let location = CLLocationCoordinate2D(latitude: 35.165964, longitude: 129.072543)
         
