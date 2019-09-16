@@ -46,17 +46,16 @@ class ViewController: UIViewController {
     }
     
     // MapType 버튼 설정 (standard, hybrid, satellite)
-    @IBAction func standardType(_ sender: Any) {
+    @IBAction func standardTypeButton(_ sender: Any) {
         mapView.mapType = MKMapType.standard
     }
     
-    @IBAction func hybridType(_ sender: Any) {
+    @IBAction func hybridTypeButton(_ sender: Any) {
         mapView.mapType = MKMapType.hybrid
     }
     
-    @IBAction func satelliteType(_ sender: Any) {
+    @IBAction func satelliteTypeButton(_ sender: Any) {
         mapView.mapType = MKMapType.satellite
     }
-
 }
 
